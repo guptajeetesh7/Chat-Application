@@ -24,7 +24,9 @@
 			$sender = mysql_real_escape_string($sender);
 			$message = mysql_real_escape_string($message);
 
-			$query = "INSERT INTO `chat` VALUES (null ,$sender, $message)";
+			$query = "INSERT INTO `chat` VALUES (null ,'$sender', '$message')";
+
+			
 
 			if($query_run = mysql_query($query)){
 
@@ -32,6 +34,7 @@
 
 			}else{
 				return false ;
+				echo '<br>'.mysql_error().'<br>';
 			}
 
 

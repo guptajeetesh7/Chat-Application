@@ -2,7 +2,7 @@
 
 	function get_msg(){
 
-		$query = "SELECT `sender` , `message` FROM `chat` ";
+		$query = "SELECT `sender` , `message` FROM `chat` ORDER BY `id` DESC";
 
 		$query_run = mysql_query($query);
 

@@ -31,29 +31,42 @@ if(isset($_POST['send'])){
 
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<title>Chat Application</title>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+	</head>
+
+	<body>
+	<div id="input">
+			<form action="index.php" method="post">
+
+				<label>Enter Name :<input type="text" name="sender"> </label>
+				<label>Enter Message:<input type="text" name="message"></label>
+				<br><br>
+				<input type="submit" name="send" value="Send Messages">
+				
+
+			</form>	
+	</div>		
+					
 <div id="messages">
-
-<?php
-	
-	$messages = get_msg();
-
-	foreach( $messages as $message){
-
-		echo '<br> <strong>  '.$message['sender'].'  Sent</strong><br />';
-		echo $message['message'].'<br /><br />';
-	}
-
-?>	
 
 
 </div><!--MESSAGES-->
 <br>
-<form action="index.php" method="post">
 
-	<label>Enter Name :<input type="text" name="sender"> </label>
-	<label>Enter Message:<input type="text" name="message"></label>
-	<br><br>
-	<input type="submit" name="send" value="Send Messages">
-	
+	</body>
 
-</form>
+<!--Javascript-->
+<script type="text/javascript" src="scripts/js/script.js"></script>
+
+</html>
+
